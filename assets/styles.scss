@@ -1,0 +1,838 @@
+// Import variables
+@import 'variables';
+
+// SCSS Variables
+$sidebar-width: 280px;
+$sidebar-collapsed-width: 60px;
+$primary-color: #F68A1F;
+$primary-hover: #e67d1a;
+$sidebar-bg: #213034;
+$text-dark: #01151A;
+$text-muted: #697173;
+$text-light: rgba(255, 255, 255, 0.8);
+$border-color: #E7E9ED;
+$body-bg: #F7F9FA;
+$white: #FFFFFF;
+$success-color: #5FA929;
+$transition: 0.3s ease;
+
+// Base styles
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: $body-bg;
+  color: $text-dark;
+  font-size: 13px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+// Sidebar Styling
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: $sidebar-width;
+  background: $sidebar-bg;
+  transition: width $transition;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &.collapsed {
+    width: $sidebar-collapsed-width;
+
+    .sidebar-toggle i {
+      transform: rotate(180deg);
+    }
+
+    .sidebar-brand {
+      justify-content: center;
+    }
+
+    .sidebar-text {
+      opacity: 0;
+      width: 0;
+      overflow: hidden;
+      margin-left: 0;
+    }
+
+    .nav-link {
+      justify-content: center;
+      padding: 16px 10px;
+    }
+
+    + .main-content {
+      margin-left: $sidebar-collapsed-width;
+    }
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  height: 100%;
+}
+
+// Sidebar Toggle Button
+.sidebar-toggle {
+  position: absolute;
+  top: 15px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  background: $primary-color;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: transform $transition;
+
+  &:hover {
+    background: $primary-hover;
+  }
+}
+
+// Breadcrumb Navigation Styles
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  
+  .breadcrumb-title a {
+    color: #F68A1F;
+    text-decoration: none;
+    font-size: 1.1rem;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .breadcrumb-separator {
+    color: #6C757D;
+    font-size: 0.875rem;
+  }
+  
+  .breadcrumb-current {
+    color: #213034;
+    font-size: 1.1rem;
+  }
+}
+
+// Sidebar Brand
+.sidebar-brand {
+  padding: 20px 16px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: all $transition;
+}
+
+// Sidebar Navigation
+.sidebar-nav {
+  padding: 0;
+  margin: 0;
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    color: $text-light;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all $transition;
+    white-space: nowrap;
+    border: none;
+
+    &:hover {
+      color: $primary-color;
+      background: rgba(246, 138, 31, 0.1);
+      text-decoration: none;
+    }
+
+    &.active {
+      color: $white;
+      background: rgba(255, 255, 255, 0.15);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: $primary-color;
+      }
+    }
+
+    i {
+      width: 20px;
+      font-size: 16px;
+      margin-right: 12px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// Main Content
+.main-content {
+  margin-left: $sidebar-width;
+  padding: 0 30px;
+  transition: margin-left $transition;
+  min-height: 100vh;
+}
+
+// Mobile Menu Button
+.mobile-menu-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  background: $primary-color;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1002;
+  align-items: center;
+  justify-content: center;
+}
+
+// Header Styling
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+
+  .breadcrumb-item {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: $primary-color;
+
+    &.active {
+      color: $text-dark;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Input Group & Search Bar
+.input-group {
+  .form-control {
+    border: 1px solid $border-color;
+    background-color: $white;
+    font-size: 13px;
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 0.2rem rgba(246, 138, 31, 0.25);
+    }
+  }
+}
+
+// Contact Card
+.card {
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .card-header {
+    background-color: $white;
+    border-bottom: 1px solid $border-color;
+
+    h6 {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 35px;
+      color: $text-dark;
+      margin-bottom: 0;
+    }
+  }
+
+  .card-body {
+    background-color: $white;
+  }
+}
+
+// Contact Details
+.contact-details {
+  font-size: 13px;
+
+  strong {
+    color: $text-dark;
+    font-weight: 500;
+  }
+
+  .text-muted {
+    color: $text-muted !important;
+  }
+
+  .text-primary {
+    color: $primary-color !important;
+  }
+}
+
+// Star Rating
+.fas.fa-star.text-warning,
+.far.fa-star.text-muted {
+  color: $primary-color !important;
+  margin-right: 2px;
+}
+
+// Badge Styling
+.badge-success {
+  background-color: $success-color !important;
+  color: $white;
+  font-size: 8px;
+  padding: 4px 8px;
+}
+
+// Tabs Styling
+.nav-tabs {
+  border-bottom: 1px solid $border-color;
+
+  .nav-link {
+    color: $text-muted;
+    border: none;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 500;
+
+    &:hover {
+      border: none;
+      color: $primary-color;
+    }
+
+    &.active {
+      color: $primary-color !important;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $primary-color;
+    }
+
+    .tab-count {
+      display: inline-block;
+      min-width: 16px;
+      height: 16px;
+      padding: 0 4px;
+      margin-left: 4px;
+      font-size: 9px;
+      line-height: 16px;
+      border-radius: 8px;
+      background: #E5E7EB;
+      color: #6B7280;
+      font-weight: 500;
+      text-align: center;
+      vertical-align: middle;
+    }
+    &.active .tab-count {
+      background: $primary-color;
+      color: #fff;
+    }
+  }
+}
+
+// Button Styling
+.btn-outline-primary {
+  color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.btn-warning {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $white;
+  font-size: 8px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+  }
+}
+
+.btn-secondary {
+  background-color: $border-color;
+  border-color: $border-color;
+  color: $text-muted;
+  font-size: 8px;
+
+  &:hover {
+    background-color: #dde1e6;
+    border-color: #dde1e6;
+  }
+}
+
+.btn-link {
+  color: $text-muted;
+
+  &:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+// Accordion Styling
+.accordion {
+  .card {
+    border: 1px solid $border-color;
+    margin-bottom: 1px;
+
+    .card-header {
+      padding: 0;
+
+      .btn {
+        color: $text-dark;
+        text-decoration: none;
+        padding: 15px 20px;
+        font-weight: 500;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        &.collapsed .fas.fa-chevron-down {
+          transform: rotate(-90deg);
+        }
+      }
+
+      .fas.fa-chevron-right,
+      .fas.fa-chevron-down {
+        transition: transform 0.2s ease;
+      }
+
+      .text-warning {
+        color: $primary-color !important;
+        font-size: 10px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Form Controls
+.form-check-input:checked {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+// Custom Toggle Switch
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.custom-switch .custom-control-label::before {
+  left: -2.25rem;
+  width: 2rem;
+  pointer-events: all;
+  border-radius: 0.75rem;
+  background-color: #dee2e6;
+  border: 1px solid #dee2e6;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-switch .custom-control-label::after {
+  top: calc(0.25rem + 2px);
+  left: calc(-2.25rem + 2px);
+  width: calc(1rem - 4px);
+  height: calc(1rem - 4px);
+  background-color: #fff;
+  border-radius: 0.75rem;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-control-input:checked ~ .custom-switch .custom-control-label::after {
+  background-color: #fff;
+  transform: translateX(0.75rem);
+}
+
+// Text Colors
+.text-warning {
+  color: $primary-color !important;
+}
+
+.text-success {
+  color: $success-color !important;
+}
+
+// Small text styles
+.small {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+// Communication email styling
+.border-bottom {
+  border-color: $border-color !important;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform $transition;
+
+    &.collapsed {
+      width: $sidebar-width;
+    }
+
+    &.collapsed + .main-content {
+      margin-left: 0;
+    }
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 60px 20px 20px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    padding: 60px 15px 15px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .nav-tabs .nav-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+// Sidebar Styling
+.sidebar {
+  background-color: $color-dark !important;
+  min-height: 100vh;
+  
+  .navbar-brand img {
+    filter: brightness(0) invert(1);
+  }
+  
+  .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    padding: 0.75rem 1rem;
+    font-size: $font-size-lg;
+    
+    &:hover {
+      color: $color-white !important;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    &.active {
+      color: $color-white !important;
+      background-color: $color-accent;
+      border-radius: 4px;
+    }
+    
+    i {
+      width: 20px;
+      text-align: center;
+    }
+  }
+}
+
+// Header Styling
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  
+  .breadcrumb-item {
+    @include character-style-1;
+    
+    &.active {
+      color: $color-black;
+    }
+    
+    a {
+      color: $color-accent;
+      text-decoration: none;
+    }
+  }
+}
+
+// Search Bar
+.input-group {
+  .form-control {
+    border: 1px solid $color-bg;
+    background-color: $color-white;
+    font-size: $font-size-lg;
+    
+    &:focus {
+      border-color: $color-accent;
+      box-shadow: 0 0 0 0.2rem rgba(246, 138, 31, 0.25);
+    }
+  }
+}
+
+// Contact Card
+.card {
+  border: 1px solid $color-bg;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  .card-header {
+    background-color: $color-white;
+    border-bottom: 1px solid $color-bg;
+    
+    h6 {
+      @include character-style-5;
+      margin-bottom: 0;
+    }
+  }
+  
+  .card-body {
+    background-color: $color-white;
+  }
+}
+
+// Contact Details
+.contact-details {
+  font-size: $font-size-lg;
+  
+  strong {
+    color: $color-black;
+    font-weight: $font-weight-medium;
+  }
+  
+  .text-muted {
+    color: $color-muted !important;
+  }
+  
+  .text-primary {
+    color: $color-accent !important;
+  }
+}
+
+// Star Rating
+.fas.fa-star.text-warning,
+.far.fa-star.text-muted {
+  color: $color-accent !important;
+  margin-right: 2px;
+}
+
+// Badge Styling
+.badge-success {
+  background-color: $color-success !important;
+  color: $color-white;
+  font-size: $font-size-xs;
+  padding: 4px 8px;
+}
+
+// Tabs Styling
+.nav-tabs {
+  border-bottom: 1px solid $color-bg;
+  
+  .nav-link {
+    color: $color-muted;
+    border: none;
+    padding: 12px 20px;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-medium;
+    
+    &:hover {
+      border: none;
+      color: $color-accent;
+    }
+    
+    &.active {
+      color: $color-accent !important;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $color-accent;
+    }
+
+    .tab-count {
+      display: inline-block;
+      min-width: 18px;
+      padding: 2px 6px;
+      margin-left: 6px;
+      font-size: 10px;
+      line-height: 1;
+      border-radius: 12px;
+      background: #F0F2F4;
+      color: #697173;
+      font-weight: 600;
+      text-align: center;
+    }
+    &.active .tab-count {
+      background: $primary-color;
+      color: #fff;
+    }
+  }
+}
+
+// Buttons
+.btn-outline-primary {
+  color: $color-accent;
+  border-color: $color-accent;
+  
+  &:hover {
+    background-color: $color-accent;
+    border-color: $color-accent;
+  }
+}
+
+.btn-warning {
+  background-color: $color-accent;
+  border-color: $color-accent;
+  color: $color-white;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  
+  &:hover {
+    background-color: darken($color-accent, 10%);
+    border-color: darken($color-accent, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $color-bg;
+  border-color: $color-bg;
+  color: $color-muted;
+  font-size: $font-size-xs;
+  
+  &:hover {
+    background-color: darken($color-bg, 10%);
+    border-color: darken($color-bg, 10%);
+  }
+}
+
+.btn-link {
+  color: $color-muted;
+  
+  &:hover {
+    color: $color-accent;
+    text-decoration: none;
+  }
+}
+
+// Accordion Styling
+.accordion {
+  .card {
+    border: 1px solid $color-bg;
+    margin-bottom: 1px;
+    
+    .card-header {
+      padding: 0;
+      
+      .btn {
+        color: $color-black;
+        text-decoration: none;
+        padding: 15px 20px;
+        font-weight: $font-weight-medium;
+        
+        &:hover {
+          color: $color-accent;
+        }
+        
+        &.collapsed {
+          .fas.fa-chevron-down {
+            transform: rotate(-90deg);
+          }
+        }
+        
+        .fas.fa-chevron-right,
+        .fas.fa-chevron-down {
+          transition: transform 0.2s ease;
+        }
+      }
+      
+      .text-warning {
+        color: $color-accent !important;
+        font-size: $font-size-md;
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}
+
+// Form Controls
+.form-check-input {
+  &:checked {
+    background-color: $color-accent;
+    border-color: $color-accent;
+  }
+}
+
+// Text Colors
+.text-warning {
+  color: $color-accent !important;
+}
+
+.text-success {
+  color: $color-success !important;
+}
+
+// Small text styles
+.small {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+}
+
+// Communication email styling
+.border-bottom {
+  border-color: $color-bg !important;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    
+    &.show {
+      left: 0;
+    }
+  }
+  
+  main {
+    margin-left: 0 !important;
+  }
+}

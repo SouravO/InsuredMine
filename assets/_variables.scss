@@ -1,0 +1,64 @@
+// Color Variables
+$color-primary: #D45C36;
+$color-secondary: #62C2AC;
+$color-accent: #F68A1F;
+$color-success: #5FA929;
+$color-info: #D0EDE6;
+$color-dark: #213034;
+$color-light: #F7F9FA;
+$color-muted: #697173;
+$color-bg: #E7E9ED;
+$color-white: #FFFFFF;
+$color-modal-bg: #F68A1F1A;
+$color-modal-bg2: #F68A1F33;
+$color-green-light: #D2ECB9;
+$color-black: #01151A;
+
+// Font Variables
+$font-family-base: 'Poppins', Arial, sans-serif;
+$font-size-xs: 8px;
+$font-size-sm: 9px;
+$font-size-md: 10px;
+$font-size-lg: 13px;
+$font-size-xl: 14px;
+$font-size-xxl: 16px;
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+// Line Heights
+$line-height-xs: 11px;
+$line-height-sm: 12px;
+$line-height-md: 16px;
+$line-height-lg: 20px;
+$line-height-xl: 24px;
+$line-height-xxl: 25px;
+$line-height-xxxl: 35px;
+$line-height-modal: 37px;
+$line-height-huge: 55px;
+
+// Character Styles Mixins
+@mixin character-style-1 {
+  font-family: $font-family-base;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  color: $color-accent;
+}
+@mixin character-style-2 {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-sm;
+  line-height: $line-height-xs;
+  color: $color-secondary;
+}
+@mixin character-style-3 {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  color: $color-muted;
+}
+// ...continue for other character styles as needed

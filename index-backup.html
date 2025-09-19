@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsuredMine Responsive Demo</title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar Navigation -->
+      <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+        <div class="sidebar-sticky">
+          <!-- Logo -->
+          <div class="navbar-brand text-center py-3">
+            <img src="https://via.placeholder.com/120x30/D45C36/FFFFFF?text=INSUREDMINE" alt="InsuredMine"
+              class="img-fluid">
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-play mr-2"></i> Get Started
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-tachometer-alt mr-2"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-chart-line mr-2"></i> Pipelines
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-building mr-2"></i> Companies
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light active" href="#">
+                <i class="fas fa-users mr-2"></i> Contacts
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-shield-alt mr-2"></i> Policies
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-user-tie mr-2"></i> Carriers
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-bullhorn mr-2"></i> Marketing
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-tasks mr-2"></i> Tasks
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-chart-bar mr-2"></i> Opportunities
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-cog mr-2"></i> Setup
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-calendar mr-2"></i> Calendar
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-envelope mr-2"></i> Work email
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-chart-pie mr-2"></i> Reports
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-tag mr-2"></i> Category
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-wifi mr-2"></i> Client Pulse
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <i class="fas fa-cogs mr-2"></i> Settings
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="col-md-10 ml-sm-auto px-4">
+        <!-- Header with breadcrumb and search -->
+        <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="#" class="text-warning">Contacts</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Madilyn Fowler</li>
+            </ol>
+          </nav>
+
+          <div class="d-flex align-items-center">
+            <!-- Search Bar -->
+            <div class="input-group mr-3" style="width: 250px;">
+              <input type="text" class="form-control" placeholder="Smart Search">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+              </div>
+            </div>
+
+            <!-- User Profile -->
+            <div class="dropdown">
+              <button class="btn btn-link dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown">
+                <span class="badge badge-success">S</span> Savannah Nguyen
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Profile Section -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <h4 class="mb-0 mr-2">Madilyn</h4>
+                  <span class="badge badge-success">ACTIVE</span>
+                </div>
+
+                <!-- Star Rating -->
+                <div class="mb-2">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="far fa-star text-muted"></i>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="contact-details">
+                  <div class="mb-2">
+                    <strong>Company:</strong>
+                    <span class="text-muted">Anna & Vriend Kings</span>
+                  </div>
+                  <div class="mb-2">
+                    <strong>Date of birth:</strong>
+                    <span class="text-muted">12/23/86</span>
+                  </div>
+                  <div class="mb-2">
+                    <strong>Phone:</strong>
+                    <span class="text-primary">(301) 555-0118</span>
+                  </div>
+                  <div class="mb-2">
+                    <strong>Email:</strong>
+                    <span class="text-primary">madilyn.youngdm@example.com</span>
+                  </div>
+                  <div class="mb-3">
+                    <strong>Address:</strong>
+                    <span class="text-muted">1670 Northwest 23rd Street</span>
+                  </div>
+                </div>
+
+                <!-- Action Icons -->
+                <div class="d-flex justify-content-around border-top pt-3">
+                  <button class="btn btn-link p-1" title="Note">
+                    <i class="fas fa-sticky-note"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="Email">
+                    <i class="fas fa-envelope"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="Call">
+                    <i class="fas fa-phone"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="SMS">
+                    <i class="fas fa-sms"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="Task">
+                    <i class="fas fa-tasks"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="File">
+                    <i class="fas fa-file"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="Activity">
+                    <i class="fas fa-chart-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <!-- Main Tabs -->
+            <ul class="nav nav-tabs" id="mainTabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" id="policies-tab" data-toggle="tab" href="#policies" role="tab">Policies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="notes-tab" data-toggle="tab" href="#notes" role="tab">Notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="communication-tab" data-toggle="tab" href="#communication"
+                  role="tab">Communication</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="files-tab" data-toggle="tab" href="#files" role="tab">Files</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tasks-tab" data-toggle="tab" href="#tasks" role="tab">Tasks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="activities-tab" data-toggle="tab" href="#activities" role="tab">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="timeline-tab" data-toggle="tab" href="#timeline" role="tab">Timeline</a>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content mt-3" id="mainTabContent">
+              <!-- Communication Tab -->
+              <div class="tab-pane fade show active" id="communication" role="tabpanel">
+                <!-- Upcoming Section -->
+                <div class="card mb-3">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Upcoming</h6>
+                    <div>
+                      <button class="btn btn-sm btn-outline-primary mr-2">Schedule</button>
+                      <button class="btn btn-sm btn-warning">All</button>
+                      <button class="btn btn-sm btn-secondary">SMS</button>
+                      <button class="btn btn-sm btn-secondary">Email</button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <!-- Email 1 -->
+                    <div class="border-bottom pb-3 mb-3">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h6 class="mb-1">Automated Email</h6>
+                          <p class="text-muted small mb-1">Scheduled for 08/26/2020 as a part of <span
+                              class="text-warning">Key Peppy Birthday Automation</span></p>
+                          <p class="text-muted small mb-1"><strong>Subject:</strong> Happy Birthday!</p>
+                          <p class="small">Looking started he up perhaps against. How remainder all additions get
+                            elsewhere resources. One missed shy wishes supply design answer formed. no daughter...</p>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" checked>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Email 2 -->
+                    <div>
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h6 class="mb-1">Automated Email</h6>
+                          <p class="text-muted small mb-1">If replied to stage 1 as a part of <span
+                              class="text-warning">Office Hours Drip Campaign</span></p>
+                          <p class="text-muted small mb-1"><strong>Subject:</strong> Let's Talk about our referral
+                            program</p>
+                          <p class="small">Looking started he up perhaps against. How remainder all additions get
+                            elsewhere resources. One missed shy wishes supply design answer formed. no daughter...</p>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" checked>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collapsible Contact Details Sections -->
+            <div class="mt-4">
+              <div class="accordion" id="contactAccordion">
+                <!-- Collapse All Button -->
+                <div class="mb-3">
+                  <button class="btn btn-link text-warning p-0" type="button">
+                    <i class="fas fa-chevron-down mr-1"></i> Collapse All
+                  </button>
+                </div>
+
+                <!-- Organization Section -->
+                <div class="card">
+                  <div class="card-header" id="orgHeading">
+                    <h6 class="mb-0">
+                      <button class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center"
+                        type="button" data-toggle="collapse" data-target="#orgCollapse">
+                        <span><i class="fas fa-chevron-down mr-2"></i> Organization</span>
+                        <span class="text-warning">EDIT</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="orgCollapse" class="collapse show" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-2">
+                            <strong>Organization name:</strong>
+                            <div class="text-muted">Avvo SI</div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-2">
+                            <strong>Designation:</strong>
+                            <div class="text-muted">SI</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Other Section -->
+                <div class="card">
+                  <div class="card-header" id="otherHeading">
+                    <h6 class="mb-0">
+                      <button class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center"
+                        type="button" data-toggle="collapse" data-target="#otherCollapse">
+                        <span><i class="fas fa-chevron-down mr-2"></i> Other</span>
+                        <span class="text-warning">EDIT</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="otherCollapse" class="collapse show" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-2">
+                            <strong>Driving license:</strong>
+                            <div class="text-muted">848239</div>
+                          </div>
+                          <div class="mb-2">
+                            <strong>SSN number:</strong>
+                            <div class="text-muted">078-05-1120</div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-2">
+                            <strong>Description:</strong>
+                            <div class="text-muted">Looking started he up perhaps against. How remainder all additions
+                              get elsewhere re...</div>
+                            <a href="#" class="text-warning small">Show more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Custom Data Section -->
+                <div class="card">
+                  <div class="card-header" id="customDataHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#customDataCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Custom Data</span>
+                        <span class="text-warning">Edit</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="customDataCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No custom data available</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tags Section -->
+                <div class="card">
+                  <div class="card-header" id="tagsHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#tagsCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Tags</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="tagsCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No tags assigned</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Linked Contacts Section -->
+                <div class="card">
+                  <div class="card-header" id="linkedContactsHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#linkedContactsCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Linked Contacts</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="linkedContactsCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No linked contacts</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Intake Form Section -->
+                <div class="card">
+                  <div class="card-header" id="intakeFormHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#intakeFormCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Intake Form</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="intakeFormCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No intake form data</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- House Section -->
+                <div class="card">
+                  <div class="card-header" id="houseHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#houseCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> House</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="houseCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No house information</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Vehicles Section -->
+                <div class="card">
+                  <div class="card-header" id="vehiclesHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#vehiclesCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Vehicles</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="vehiclesCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No vehicle information</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Family Section -->
+                <div class="card">
+                  <div class="card-header" id="familyHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#familyCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Family</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="familyCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No family information</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Assets Section -->
+                <div class="card">
+                  <div class="card-header" id="assetsHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#assetsCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Assets</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="assetsCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No assets information</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
