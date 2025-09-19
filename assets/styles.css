@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 200px;
+  width: 180px;
   background: #213034;
   transition: width 0.3s ease;
   z-index: 1000;
@@ -67,6 +67,58 @@ body {
 
 .sidebar-toggle:hover {
   background: #e67d1a;
+}
+
+/* Send Email Modal styles */
+.modal .modal-content {
+  border-radius: 6px;
+}
+.modal .modal-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.modal .modal-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.modal .modal-body {
+  padding: 18px 24px;
+}
+.modal .form-group label {
+  font-weight: 500;
+  color: #6b6b6b;
+}
+.email-editor .editor-toolbar button {
+  border: 1px solid #eef0f2;
+  background: #ffffff;
+}
+.file-drop {
+  border: 1px dashed #e9e9e9;
+  background: #fafafa;
+  cursor: pointer;
+}
+.file-drop:hover {
+  background: #fff;
+}
+.attachment-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+.attachment-item .file-name {
+  font-size: 14px;
+}
+.modal-footer {
+  padding: 12px 24px;
+}
+.btn-warning {
+  background: #F68A1F;
+  border-color: #F68A1F;
+  color: #fff;
+}
+.btn-outline-secondary {
+  border-color: #e9e9e9;
 }
 
 /* Sidebar Brand */
@@ -705,6 +757,73 @@ body {
 .accordion .card .card-header .fas.fa-chevron-right,
 .accordion .card .card-header .fas.fa-chevron-down {
   transition: transform 0.2s ease;
+}
+
+/* Send Email modal attachments */
+.attachment-item {
+  background: #fff;
+  border: 1px solid #eef0f3;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.attachment-item .file-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f9fb;
+  border-radius: 4px;
+}
+.attachment-item .file-name {
+  margin-right: 8px;
+}
+.file-drop {
+  border: 2px dashed #e6e9ef;
+  background: #fff;
+}
+
+/* Right-side slide-over panel for Send Email modal */
+.modal.right-panel .modal-dialog.modal-right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  margin: 0;
+  transform: translateX(100%);
+  transition: transform 0.35s ease-in-out;
+  width: 420px;
+  max-width: 100%;
+}
+.modal.right-panel.show .modal-dialog.modal-right {
+  transform: translateX(0);
+}
+.modal.right-panel .modal-backdrop {
+  opacity: 0.35;
+}
+.panel-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.panel-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eef0f3;
+  background: #fff;
+}
+.panel-body {
+  overflow-y: auto;
+  flex: 1 1 auto;
+  background: #fff;
+}
+.panel-footer {
+  background: #fff;
+  border-top: 1px solid #eef0f3;
+}
+.modal.right-panel .close {
+  background: transparent;
+  border: none;
+  font-size: 20px;
 }
 
 .accordion .card .card-header .text-warning {

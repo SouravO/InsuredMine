@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsuredMine Responsive Demo</title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar" id="sidebar">
+        <div class="sidebar-sticky">
+          <!-- Collapse Button -->
+          <button class="sidebar-toggle" id="sidebarToggle" type="button">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <!-- Logo -->
+          <div class="sidebar-brand">
+            <i class="fas fa-shield-alt text-warning mr-2"></i>
+            <span class="sidebar-text">INSUREDMINE</span>
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="nav flex-column sidebar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-rocket"></i>
+                <span class="sidebar-text">Get Started</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-th-large"></i>
+                <span class="sidebar-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-chart-line"></i>
+                <span class="sidebar-text">Pipelines</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-building"></i>
+                <span class="sidebar-text">Companies</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <i class="fas fa-users"></i>
+                <span class="sidebar-text">Contacts</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-file-contract"></i>
+                <span class="sidebar-text">Policies</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-university"></i>
+                <span class="sidebar-text">Carriers</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-bullhorn"></i>
+                <span class="sidebar-text">Marketing</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-list-ul"></i>
+                <span class="sidebar-text">Tasklist</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-chart-bar"></i>
+                <span class="sidebar-text">Opportunities</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-wpforms"></i>
+                <span class="sidebar-text">Forms</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="sidebar-text">Calendar</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-envelope"></i>
+                <span class="sidebar-text">Work email</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-chart-pie"></i>
+                <span class="sidebar-text">Reports</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-list"></i>
+                <span class="sidebar-text">Category</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-wifi"></i>
+                <span class="sidebar-text">Client Pulse</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-cog"></i>
+                <span class="sidebar-text">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content w-100" id="mainContent">
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn d-md-none" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <!-- Top Header Navigation -->
+        <div class="top-header-nav d-flex justify-content-between align-items-center py-3 px-4 bg-white border-bottom">
+          <!-- Left Side - Search Bar -->
+          <div class="search-section">
+            <div class="search-wrapper position-relative">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" class="search-input form-control" placeholder="Smart Search">
+            </div>
+          </div>
+
+          <!-- Right Side - User Profile Section -->
+          <div class="profile-section d-flex align-items-center">
+            <!-- User Info with Avatar and Name -->
+            <div class="user-profile-container d-flex align-items-center mr-3">
+              <div class="user-avatar-circle me-2">
+                <span class="user-initial">AL</span>
+              </div>
+              <span class="user-name-text">Savannah Nguyen</span>
+            </div>
+
+            <!-- Action Icons -->
+            <div class="action-icons d-flex align-items-center">
+              <!-- Plus Icon (Orange) - opens Add modal -->
+              <button type="button" class="action-icon-btn orange mr-2 btn" data-toggle="modal" data-target="#addModal"
+                aria-label="Add">
+                <i class="fas fa-plus"></i>
+              </button>
+
+              <!-- Chat Icon (Gray) -->
+              <div class="action-icon-btn  mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chat-left" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                </svg>
+              </div>
+
+              <!-- Bell Notification Icon (Gray with Orange Dot) -->
+              <div class="action-icon-btn notification mr-3">
+                <i class="fas fa-bell text-secondary fa-lg"></i>
+                <span class="notification-dot"></span>
+              </div>
+
+              <!-- User Profile Image -->
+              <div class="user-profile-image">
+                <img
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="User Profile" class="profile-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb-container py-3 px-4">
+          <nav class="breadcrumb-nav">
+            <span class="breadcrumb-title">
+              <a href="#" class="text-warning">Contacts</a>
+            </span>
+            <i class="fas fa-chevron-right breadcrumb-separator mx-2"></i>
+            <span class="breadcrumb-current">Madilyn Fowler</span>
+          </nav>
+        </div>
+
+        <!-- Contact Profile Section -->
+        <div class="row">
+          <div class="col-md-4 ">
+            <!-- contact card -->
+            <div class="card ml-3">
+              <div class="card-body ">
+                <div class="d-flex align-items-center   ">
+                  <div style="width: 40%;">
+                    <h4 class="mb-0 mr-2">Madilyn</h4>
+                  </div>
+                  <div>
+                    <span class="badge badge-success">ACTIVE</span>
+                  </div>
+                </div>
+
+                <!-- Star Rating -->
+                <div class="mb-2">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="far fa-star text-muted"></i>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="contact-details">
+                  <div class="d-flex  justify-content-lg-start ">
+                    <div class="mb-2 " style="width: 40%;">
+                      <strong>Company:</strong>
+                    </div>
+                    <div class="mb-2 ">
+                      <span class="text-muted ">Anna & Vriend Kings</span>
+                    </div>
+                  </div>
+                  <!-- gender female -->
+                  <div class="d-flex">
+                    <div class="mb-2 " style="width: 40%;">
+                      <strong>Gender:</strong>
+                    </div>
+                    <div class="mb-2 ">
+                      <span class="text-muted ">Female</span>
+                    </div>
+                  </div>
+                  <!-- Date of birth -->
+                  <div class="d-flex">
+                    <div class="mb-2 " style="width: 40%;">
+                      <strong>Date of birth:</strong>
+                    </div>
+                    <div class="mb-2  ">
+                      <span class="text-muted ">12/23/86</span>
+                    </div>
+                  </div>
+                  <!-- phone -->
+                  <div class="d-flex">
+                    <div class="mb-2 " style="width: 40%;">
+                      <strong>Phone:</strong>
+                    </div>
+                    <div class="mb-2">
+                      <span class="text-primary">(301) 555-0118</span>
+                    </div>
+                  </div>
+                  <!-- email -->
+                  <div class="d-flex">
+                    <div class="mb-2 " style="width: 40%;">
+                      <strong>Email:</strong>
+                    </div>
+                    <div class="mb-2">
+                      <span class="text-primary">georgia.young@example.com</span>
+                    </div>
+                  </div>
+                  <!-- Address -->
+                  <div class="d-flex">
+                    <div class="mb-2 " style="width: 40%;">
+                      <strong>Address:</strong>
+                    </div>
+                    <div class="mb-2">
+                      <span class="text-muted ">19091 Northeast 23rd Street</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action Icons -->
+                <div class="d-flex justify-content-around border-top pt-3">
+                  <button class="btn btn-link p-1" title="Note">
+                    <i class="fas fa-sticky-note"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="Email">
+                    <i class="fas fa-envelope"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="Call">
+                    <i class="fas fa-phone"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="SMS">
+                    <i class="fas fa-sms"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="Task">
+                    <i class="fas fa-tasks"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="File">
+                    <i class="fas fa-file"></i>
+                  </button>
+                  <button class="btn btn-link p-1" title="Activity">
+                    <i class="fas fa-chart-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Collapsible Contact Details Sections -->
+            <div class="mt-4">
+              <div class="accordion" id="contactAccordion">
+                <!-- Collapse All Button -->
+                <div class="mb-3">
+                  <button id="collapseAllBtn" class="btn btn-link text-warning p-0" type="button">
+                    <i class="fas fa-chevron-down mr-1"></i> Collapse All
+                  </button>
+                </div>
+
+                <!-- Organization Section -->
+                <div class="card">
+                  <div class="card-header" id="orgHeading">
+                    <h6 class="mb-0">
+                      <button class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center"
+                        type="button" data-toggle="collapse" data-target="#orgCollapse">
+                        <span><i class="fas fa-chevron-down mr-2"></i> Organization</span>
+                        <span class="text-warning">EDIT</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="orgCollapse" class="collapse show" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-2">
+                            <strong>Organization name:</strong>
+                            <div class="text-muted">Area 51</div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-2">
+                            <strong>Designation:</strong>
+                            <div class="text-muted">51</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Other Section -->
+                <div class="card">
+                  <div class="card-header" id="otherHeading">
+                    <h6 class="mb-0">
+                      <button class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center"
+                        type="button" data-toggle="collapse" data-target="#otherCollapse">
+                        <span><i class="fas fa-chevron-down mr-2"></i> Other</span>
+                        <span class="text-warning">EDIT</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="otherCollapse" class="collapse show" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-2">
+                            <strong>Driving license:</strong>
+                            <div class="text-muted">849339</div>
+                          </div>
+                          <div class="mb-2">
+                            <strong>SSN number:</strong>
+                            <div class="text-muted">078-05-1120</div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-2">
+                            <strong>Description:</strong>
+                            <div class="text-muted">Looking started he up perhaps against. How remainder all additions
+                              get elsewhere re...</div>
+                            <a href="#" class="text-warning small">Show more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Custom Data Section -->
+                <div class="card">
+                  <div class="card-header" id="customDataHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#customDataCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Custom Data</span>
+                        <span class="text-warning">Edit</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="customDataCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No custom data available</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tags Section -->
+                <div class="card">
+                  <div class="card-header" id="tagsHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#tagsCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Tags</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="tagsCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No tags assigned</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Linked Contacts Section -->
+                <div class="card">
+                  <div class="card-header" id="linkedContactsHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#linkedContactsCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Linked Contacts</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="linkedContactsCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No linked contacts</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Intake Form Section -->
+                <div class="card">
+                  <div class="card-header" id="intakeFormHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#intakeFormCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Intake Form</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="intakeFormCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No intake form data</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- House Section -->
+                <div class="card">
+                  <div class="card-header" id="houseHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#houseCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> House</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="houseCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No house information</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Vehicles Section -->
+                <div class="card">
+                  <div class="card-header" id="vehiclesHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#vehiclesCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Vehicles</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="vehiclesCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No vehicle information</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Family Section -->
+                <div class="card">
+                  <div class="card-header" id="familyHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#familyCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Family</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="familyCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No family information</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Assets Section -->
+                <div class="card">
+                  <div class="card-header" id="assetsHeading">
+                    <h6 class="mb-0">
+                      <button
+                        class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
+                        type="button" data-toggle="collapse" data-target="#assetsCollapse">
+                        <span><i class="fas fa-chevron-right mr-2"></i> Assets</span>
+                        <span class="text-warning">Add</span>
+                      </button>
+                    </h6>
+                  </div>
+                  <div id="assetsCollapse" class="collapse" data-parent="#contactAccordion">
+                    <div class="card-body">
+                      <p class="text-muted">No assets information</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <!-- Main Tabs -->
+            <ul class="nav nav-tabs shadow-sm bg-white" id="mainTabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" id="policies-tab" data-toggle="tab" href="#policies" role="tab">Policies
+                  <span class="tab-count ml-2"
+                    style="background-color: #e7e9ed; color: #a7abae; padding: 2px 6px;  border-radius: 4px; font-size: 12px;">2</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="notes-tab" data-toggle="tab" href="#notes" role="tab">Notes
+                  <span class="tab-count ml-2"
+                    style="background-color: #e7e9ed; color: #a7abae; padding: 2px 6px; border-radius: 4px; font-size: 12px;">1</span></a>
+              </li>
+              <li class="nav-item"></li>
+              <a class="nav-link active" id="communication-tab" data-toggle="tab" href="#communication" role="tab"
+                style="color: #000!important;">Communication
+                <span class="tab-count ml-2"
+                  style="background-color: #e7e9ed; color: #a7abae; padding: 2px 6px; border-radius: 4px; font-size: 12px;">6</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="files-tab" data-toggle="tab" href="#files" role="tab">Files
+                  <span class="tab-count ml-2"
+                    style="background-color: #e7e9ed; color: #a7abae; padding: 2px 6px; border-radius: 4px; font-size: 12px;">3</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tasks-tab" data-toggle="tab" href="#tasks" role="tab">Tasks
+                  <span class="tab-count ml-2"
+                    style="background-color: #e7e9ed; color: #a7abae; padding: 2px 6px; border-radius: 4px; font-size: 12px;">4</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="activities-tab" data-toggle="tab" href="#activities" role="tab">Activities
+                  <span class="tab-count ml-2"
+                    style="background-color: #e7e9ed; color: #a7abae; padding: 2px 6px; border-radius: 4px; font-size: 12px;">5</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="timeline-tab" data-toggle="tab" href="#timeline" role="tab">Timeline</a>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content mt-3 mx-2" id="mainTabContent">
+              <!-- Communication Tab -->
+              <div class="tab-pane fade show active" id="communication" role="tabpanel">
+                <!-- Upcoming Section -->
+                <div>
+                  <div class=" mb-3 d-flex justify-content-between   align-items-center"
+                    style="background-color: #f7f9fa;">
+                    <h6 class="mb-0 ">Upcoming</h6>
+                    <div class="d-flex align-items-center ">
+                      <button
+                        class="btn btn-sm btn-outline-secondary mr-2 d-flex align-items-center mr-3 px-3 bg-white shadow-sm border-0 black-hover-text"
+                        style="hover-color: #000;">
+                        <style>
+                          .black-hover-text:hover {
+                            color: #000 !important;
+                          }
+                        </style>
+                        <i class="fas fa-calendar mr-2"></i>Schedule
+                      </button>
+                      <div class="btn-group mr-2 px-4 p-2">
+                        <button class="btn btn-sm active"
+                          style="background-color: #FFF8E1; color: #F68A1F; border: 1px solid #F68A1F; border-radius: 4px 0 0 4px;">All</button>
+                        <button class="btn btn-sm"
+                          style="background-color: white; color: #6c757d; border: 1px solid #dee2e6; border-radius: 0;">SMS</button>
+                        <button class="btn btn-sm"
+                          style="background-color: white; color: #6c757d; border: 1px solid #dee2e6; border-radius: 0 4px 4px 0;">Email</button>
+                      </div>
+                      <button class="btn btn-sm btn-outline-secondary">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <!-- Email 1 -->
+                      <div class="border-bottom pb-3 mb-3">
+                        <!-- Email Header with Title and Toggle -->
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-chevron-down text-muted mr-2"></i>
+                            <h6 class="mb-0">Automated Email</h6>
+                          </div>
+                          <div class="d-flex ">
+                            <!-- Scheduling Info -->
+                            <p class="text-muted small mb-2 ml-4">Scheduled for 09/26/2020 as a part of <span
+                                class="text-warning">Say Happy Birthday Automation</span></p>
+                            <!-- Toggle Switch -->
+                            <div class="custom-control custom-switch ml-3">
+                              <input type="checkbox" class="custom-control-input" id="emailToggle1" checked
+                                style="background-color: #F68A1F; border-color: #F68A1F;">
+                              <label class="custom-control-label" for="emailToggle1"
+                                style="background-color: transparent;"></label>
+                              <style>
+                                .custom-control-input:checked~.custom-control-label::before {
+                                  background-color: #F68A1F !important;
+                                  border-color: #F68A1F !important;
+                                }
+                              </style>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+
+                        <!-- Subject -->
+                        <p class="text-muted  mb-3 ml-4"><strong>Subject:</strong> Happy Birthday!</p>
+
+                        <!-- Content -->
+                        <p class=" mb-3 ml-4">Looking started he up perhaps against. How remainder all additions
+                          get elsewhere resources. One missed shy wishes supply design answer formed. Prevent on present
+                          hastily passage an subject in be. Be happiness arranging so newspaper defective affection ye.
+                          Families blessing he in to no daughter.</p>
+
+                        <!-- Three dots indicator -->
+                        <div class="text-warning ml-4">
+                          <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                      </div>
+
+                      <!-- Email 2 -->
+                      <div>
+                        <!-- Email Header with Title and Toggle -->
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="d-flex align-items-center">
+                            <i class="fas fa-chevron-down text-muted mr-2"></i>
+                            <h6 class="mb-0">Automated Email</h6>
+                          </div>
+                          <div class="d-flex ">
+                            <!-- Scheduling Info -->
+                            <p class="text-muted small mb-2 ml-4">If replied to stage 1 as a part of <span
+                                class="text-warning">Office Hours Drip Campaign</span></p>
+
+                            <!-- Toggle Switch -->
+                            <div class="custom-control custom-switch ml-3">
+                              <input type="checkbox" class="custom-control-input" id="emailToggle2" checked>
+                              <label class="custom-control-label" for="emailToggle2"></label>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+                        <!-- Subject -->
+                        <p class="text-muted  mb-3 ml-4"><strong>Subject:</strong> Let's Talk about our referral
+                          program</p>
+
+                        <!-- Content -->
+                        <p class=" mb-3 ml-4">Looking started he up perhaps against. How remainder all additions
+                          get elsewhere resources. One missed shy wishes supply design answer formed. Prevent on present
+                          hastily passage an subject in be. Be happiness arranging so newspaper defective affection ye.
+                          Families blessing he in to no daughter.</p>
+
+                        <!-- Three dots indicator -->
+                        <div class="text-warning ml-4">
+                          <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Send Email Modal -->
+  <div class="modal fade right-panel" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-right" role="document">
+      <div class="modal-content panel-content">
+        <div class="panel-header border-0 d-flex align-items-center justify-content-between">
+          <h5 class="modal-title mb-0" id="addModalLabel">Send email</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="panel-body p-0">
+          <form id="sendEmailForm" class="p-4">
+            <div class="form-group">
+              <label>Template</label>
+              <select class="form-control" id="emailTemplate">
+                <option value="">Select template</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Signature</label>
+              <select class="form-control" id="emailSignature">
+                <option value="">Select signature</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="d-flex justify-content-between">To <small
+                  class="text-warning">CC&nbsp;&nbsp;BCC</small></label>
+              <input type="email" class="form-control" id="emailTo" placeholder="jackson.graham@example.com">
+            </div>
+
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" class="form-control" id="emailSubject" placeholder="Email subject">
+            </div>
+
+            <!-- Rich text toolbar (visual only) -->
+            <div class="email-editor">
+              <div class="editor-toolbar mb-2">
+                <button type="button" class="btn btn-sm btn-light mr-1"><strong>B</strong></button>
+                <button type="button" class="btn btn-sm btn-light mr-1"><em>I</em></button>
+                <button type="button" class="btn btn-sm btn-light mr-1">U</button>
+                <button type="button" class="btn btn-sm btn-light mr-1">S</button>
+                <button type="button" class="btn btn-sm btn-light mr-1">•</button>
+                <button type="button" class="btn btn-sm btn-light mr-1">1.</button>
+                <button type="button" class="btn btn-sm btn-light mr-1">🔗</button>
+                <button type="button" class="btn btn-sm btn-light mr-1">A</button>
+              </div>
+              <textarea class="form-control" id="emailBody" rows="6" placeholder="Write your message..."></textarea>
+            </div>
+
+            <!-- File drop area -->
+            <div class="file-drop mt-3 mb-3 p-4 text-center rounded" id="fileDrop">
+              <div class="mb-2">Drop your files here or click here to upload</div>
+              <div class="small text-muted">Download .jpg, .png, .pdf, .jpeg. Maximum file size: 30.00 MB</div>
+              <input type="file" id="fileInput" multiple style="display:none">
+            </div>
+
+            <!-- Attachment preview area -->
+            <div id="attachmentsList" class="mb-3"></div>
+          </form>
+        </div>
+        <div class="panel-footer border-0 p-3 d-flex justify-content-end">
+          <button type="button" class="btn btn-outline-secondary mr-2" data-dismiss="modal">Cancel</button>
+          <button type="button" id="sendEmailBtn" class="btn btn-warning">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Sidebar functionality -->
+  <script>
+    $(document).ready(function () {
+      // Sidebar toggle functionality
+      $('#sidebarToggle').click(function () {
+        $('.sidebar').toggleClass('collapsed');
+      });
+
+      // Mobile menu functionality
+      $('#mobileMenuBtn').click(function () {
+        $('.sidebar').toggleClass('show');
+      });
+
+      // Close sidebar when clicking outside on mobile
+      $(document).click(function (e) {
+        if ($(window).width() <= 768) {
+          if (!$(e.target).closest('.sidebar, #mobileMenuBtn').length) {
+            $('.sidebar').removeClass('show');
+          }
+        }
+      });
+
+      // Handle window resize
+      $(window).resize(function () {
+        if ($(window).width() > 768) {
+          $('.sidebar').removeClass('show');
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      $('a[href^="#"]').on('click', function (event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top
+          }, 1000);
+        }
+      });
+
+      // Form validation
+      $('.needs-validation').on('submit', function (event) {
+        if (this.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        $(this).addClass('was-validated');
+      });
+
+      // Initialize tooltips
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Initialize popovers
+      $('[data-toggle="popover"]').popover();
+
+      // Collapse All toggle for contact accordion
+      var allCollapsed = false;
+      $('#collapseAllBtn').on('click', function () {
+        var $accordion = $('#contactAccordion');
+        if (!allCollapsed) {
+          $accordion.find('.collapse.show').collapse('hide');
+          $(this).html('<i class="fas fa-chevron-up mr-1"></i> Expand All');
+        } else {
+          $accordion.find('.collapse:not(.show)').collapse('show');
+          $(this).html('<i class="fas fa-chevron-down mr-1"></i> Collapse All');
+        }
+        allCollapsed = !allCollapsed;
+      });
+
+      // Send Email modal behavior
+      $('#fileDrop').on('click', function () {
+        $('#fileInput').trigger('click');
+      });
+
+      $('#fileInput').on('change', function (e) {
+        var files = e.target.files;
+        renderAttachments(files);
+      });
+
+      function renderAttachments(files) {
+        var $list = $('#attachmentsList');
+        $list.empty();
+        if (!files || files.length === 0) return;
+        Array.from(files).forEach(function (f, idx) {
+          var $item = $(
+            '<div class="attachment-item d-flex align-items-center mb-2">' +
+            '<div class="file-icon mr-2">📎</div>' +
+            '<div class="file-name"></div>' +
+            '<div class="file-size text-muted small ml-auto mr-2"></div>' +
+            '<button class="btn btn-link btn-sm text-danger remove-attach">×</button>' +
+            '</div>'
+          );
+          $item.find('.file-name').text(f.name);
+          $item.find('.file-size').text(Math.round(f.size / 1024 / 1024 * 100) / 100 + ' MB');
+          $item.find('.remove-attach').on('click', function () {
+            $item.remove();
+            // TODO: remove file from input - for now simplest is to clear input
+            $('#fileInput').val('');
+          });
+          $list.append($item);
+        });
+      }
+
+      $('#sendEmailBtn').on('click', function () {
+        var to = $('#emailTo').val().trim();
+        var subject = $('#emailSubject').val().trim();
+        var body = $('#emailBody').val().trim();
+        if (!to) {
+          alert('Please enter recipient email.');
+          return;
+        }
+        if (!subject) {
+          alert('Please enter subject.');
+          return;
+        }
+        // Simulate send: close modal and log
+        $('#addModal').modal('hide');
+        console.log('Send email', { to: to, subject: subject, body: body });
+      });
+    });
+  </script>
+</body>
+
+</html>
