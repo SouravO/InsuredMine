@@ -221,7 +221,7 @@
                     <h4 class="mb-0 mr-2">Madilyn</h4>
                   </div>
                   <div>
-                    <span class="badge badge-success">ACTIVE</span>
+                    <span class="badge" style="background-color: #d2ecb9; color: #5fa929; padding: 4px 8px; font-size: 12px; font-weight: 800;">ACTIVE</span>
                   </div>
                 </div>
 
@@ -235,13 +235,13 @@
                 </div>
 
                 <!-- Contact Details -->
-                <div class="contact-details">
+                <div class="contact-details mb-5">
                   <div class="d-flex  justify-content-lg-start ">
                     <div class="mb-2 " style="width: 40%;">
                       <strong>Company:</strong>
                     </div>
                     <div class="mb-2 ">
-                      <span class="text-muted ">Anna & Vriend Kings</span>
+                      <span class="text-muted " style="color: #F68A1F !important;">Ollivander's Wand Shop</span>
                     </div>
                   </div>
                   <!-- gender female -->
@@ -286,35 +286,65 @@
                       <strong>Address:</strong>
                     </div>
                     <div class="mb-2">
-                      <span class="text-muted ">19091 Northeast 23rd Street</span>
+                      <span class="text-muted " style="color: #F68A1F !important;">19091 Northeast 23rd Street</span>
                     </div>
                   </div>
                 </div>
-
                 <!-- Action Icons -->
-                <div class="d-flex justify-content-around border-top pt-3">
-                  <button class="btn btn-link p-1" title="Note">
-                    <i class="fas fa-sticky-note"></i>
+                <div class="action-buttons d-flex justify-content-around border-top pt-3">
+                  <button class="btn btn-link text-secondary p-0" title="Note">
+                    <div class="icon-box d-flex align-items-center justify-content-center mb-1">
+                      <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <div class="small mt-1">Note</div>
                   </button>
-                  <button class="btn btn-link p-1" title="Email">
-                    <i class="fas fa-envelope"></i>
+                  <button class="btn btn-link text-secondary p-0" title="Email">
+                    <div class="icon-box d-flex align-items-center justify-content-center mb-1">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="small mt-1">Email</div>
                   </button>
-                  <button class="btn btn-link p-1" title="Call">
-                    <i class="fas fa-phone"></i>
+                  <button class="btn btn-link text-secondary p-0" title="Call">
+                    <div class="icon-box d-flex align-items-center justify-content-center mb-1">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="small mt-1">Call</div>
                   </button>
-                  <button class="btn btn-link p-1" title="SMS">
-                    <i class="fas fa-sms"></i>
+                  <button class="btn btn-link text-secondary p-0" title="SMS">
+                    <div class="icon-box d-flex align-items-center justify-content-center mb-1">
+                      <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="small mt-1">SMS</div>
                   </button>
-                  <button class="btn btn-link p-1" title="Task">
-                    <i class="fas fa-tasks"></i>
+                  <button class="btn btn-link text-secondary p-0" title="Task">
+                    <div class="icon-box d-flex align-items-center justify-content-center mb-1">
+                      <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="small mt-1">Task</div>
                   </button>
-                  <button class="btn btn-link p-1" title="File">
-                    <i class="fas fa-file"></i>
+                  <button class="btn btn-link text-secondary p-0" title="File">
+                    <div class="icon-box d-flex align-items-center justify-content-center mb-1">
+                      <i class="fas fa-folder"></i>
+                    </div>
+                    <div class="small mt-1">File</div>
                   </button>
-                  <button class="btn btn-link p-1" title="Activity">
-                    <i class="fas fa-chart-line"></i>
+                  <button class="btn btn-link text-secondary p-0" title="Activity">
+                    <div class="icon-box d-flex align-items-center justify-content-center mb-1">
+                      <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="small mt-1">Activity</div>
                   </button>
                 </div>
+
+                <style>
+                .icon-box {
+                  width: 40px;
+                  height: 40px;
+                  background-color: #f8f9fa;
+                  border: 1px solid #dee2e6;
+                  border-radius: 6px;
+                }
+                </style>
               </div>
             </div>
             <!-- Collapsible Contact Details Sections -->
@@ -334,7 +364,7 @@
                       <button class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center"
                         type="button" data-toggle="collapse" data-target="#orgCollapse">
                         <span><i class="fas fa-chevron-down mr-2"></i> Organization</span>
-                        <span class="text-warning">EDIT</span>
+                        <span class="text-warning"><i class="fas fa-pen mr-1"></i>EDIT</span>
                       </button>
                     </h6>
                   </div>
@@ -365,7 +395,7 @@
                       <button class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center"
                         type="button" data-toggle="collapse" data-target="#otherCollapse">
                         <span><i class="fas fa-chevron-down mr-2"></i> Other</span>
-                        <span class="text-warning">EDIT</span>
+                        <span class="text-warning"><i class="fas fa-pen mr-1"></i>EDIT</span>
                       </button>
                     </h6>
                   </div>
@@ -403,7 +433,7 @@
                         class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
                         type="button" data-toggle="collapse" data-target="#customDataCollapse">
                         <span><i class="fas fa-chevron-right mr-2"></i> Custom Data</span>
-                        <span class="text-warning">Edit</span>
+                        <span class="text-warning"><i class="fas fa-pen mr-1"></i>Edit</span>
                       </button>
                     </h6>
                   </div>
@@ -422,7 +452,7 @@
                         class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
                         type="button" data-toggle="collapse" data-target="#tagsCollapse">
                         <span><i class="fas fa-chevron-right mr-2"></i> Tags</span>
-                        <span class="text-warning">Add</span>
+                        <span class="text-warning"><i class="fas fa-plus mr-1"></i>Add</span>
                       </button>
                     </h6>
                   </div>
@@ -441,7 +471,7 @@
                         class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
                         type="button" data-toggle="collapse" data-target="#linkedContactsCollapse">
                         <span><i class="fas fa-chevron-right mr-2"></i> Linked Contacts</span>
-                        <span class="text-warning">Add</span>
+                        <span class="text-warning"><i class="fas fa-plus mr-1"></i>Add</span>
                       </button>
                     </h6>
                   </div>
@@ -478,7 +508,7 @@
                         class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
                         type="button" data-toggle="collapse" data-target="#houseCollapse">
                         <span><i class="fas fa-chevron-right mr-2"></i> House</span>
-                        <span class="text-warning">Add</span>
+                        <span class="text-warning"><i class="fas fa-plus mr-1"></i>Add</span>
                       </button>
                     </h6>
                   </div>
@@ -497,7 +527,7 @@
                         class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
                         type="button" data-toggle="collapse" data-target="#vehiclesCollapse">
                         <span><i class="fas fa-chevron-right mr-2"></i> Vehicles</span>
-                        <span class="text-warning">Add</span>
+                        <span class="text-warning"><i class="fas fa-plus mr-1"></i>Add</span>
                       </button>
                     </h6>
                   </div>
@@ -516,7 +546,7 @@
                         class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
                         type="button" data-toggle="collapse" data-target="#familyCollapse">
                         <span><i class="fas fa-chevron-right mr-2"></i> Family</span>
-                        <span class="text-warning">Add</span>
+                        <span class="text-warning"><i class="fas fa-plus mr-1"></i>Add</span>
                       </button>
                     </h6>
                   </div>
@@ -535,7 +565,7 @@
                         class="btn btn-link text-left w-100 d-flex justify-content-between align-items-center collapsed"
                         type="button" data-toggle="collapse" data-target="#assetsCollapse">
                         <span><i class="fas fa-chevron-right mr-2"></i> Assets</span>
-                        <span class="text-warning">Add</span>
+                        <span class="text-warning"><i class="fas fa-plus mr-1"></i>Add</span>
                       </button>
                     </h6>
                   </div>
@@ -597,8 +627,8 @@
                 <div>
                   <div class=" mb-3 d-flex justify-content-between   align-items-center"
                     style="background-color: #f7f9fa;">
-                    <h6 class="mb-0 ">Upcoming</h6>
-                    <div class="d-flex align-items-center ">
+                    <h6 class="mb-0 pt-4 ">Upcoming</h6>
+                    <div class="d-flex align-items-center pt-4 ">
                       <button
                         class="btn btn-sm btn-outline-secondary mr-2 d-flex align-items-center mr-3 px-3 bg-white shadow-sm border-0 black-hover-text"
                         style="hover-color: #000;">
@@ -609,7 +639,7 @@
                         </style>
                         <i class="fas fa-calendar mr-2"></i>Schedule
                       </button>
-                      <div class="btn-group mr-2 px-4 p-2">
+                      <div class="btn-group mr-2 px-4 ">
                         <button class="btn btn-sm active"
                           style="background-color: #FFF8E1; color: #F68A1F; border: 1px solid #F68A1F; border-radius: 4px 0 0 4px;">All</button>
                         <button class="btn btn-sm"
@@ -726,7 +756,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-right" role="document">
       <div class="modal-content panel-content">
-        <div class="panel-header border-0 d-flex align-items-center justify-content-between">
+        <div class="panel-header border-1 d-flex align-items-center justify-content-between ">
           <h5 class="modal-title mb-0" id="addModalLabel">Send email</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
