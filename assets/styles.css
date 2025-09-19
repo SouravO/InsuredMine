@@ -61,12 +61,49 @@ body {
   transition: transform 0.3s ease;
 }
 
+@media (max-width: 767.98px) {
+  .sidebar-toggle {
+    right: 8px; /* keep inside the sidebar on small screens */
+    top: 8px;
+    z-index: 1003;
+  }
+}
+
 .sidebar.collapsed .sidebar-toggle i {
   transform: rotate(180deg);
 }
 
 .sidebar-toggle:hover {
   background: #e67d1a;
+}
+
+/* Sidebar Close Button for Mobile */
+.sidebar-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+}
+
+@media (max-width: 767.98px) {
+  .sidebar-close {
+    display: flex;
+  }
+}
+
+.sidebar-close:hover {
+  background-color: rgba(255,255,255,0.1);
 }
 
 /* Send Email Modal styles */
@@ -220,9 +257,6 @@ body {
 /* Mobile Menu Button */
 .mobile-menu-btn {
   display: none;
-  position: fixed;
-  top: 15px;
-  left: 15px;
   width: 40px;
   height: 40px;
   background: #F68A1F;
@@ -231,7 +265,6 @@ body {
   color: white;
   font-size: 16px;
   cursor: pointer;
-  z-index: 1002;
   align-items: center;
   justify-content: center;
 }
@@ -241,6 +274,44 @@ body {
   background: #FFFFFF;
   border-bottom: 1px solid #E7E9ED;
   margin-bottom: 0;
+}
+
+/* Show mobile menu button inline on small screens */
+@media (max-width: 767.98px) {
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+  .top-header-nav .search-section {
+    display: none; /* hide search to keep header compact on mobile */
+  }
+  /* Off-canvas sidebar */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    width: 220px; /* slightly wider for touch */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  .main-content {
+    margin-left: 0 !important;
+    padding-left: 0;
+  }
+  body, .container-fluid, .row {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .top-header-nav {
+    padding: 8px 12px !important;
+  }
+  .card.ml-3 { margin-left: 0 !important; }
+  .breadcrumb-container { padding: 8px 12px !important; }
+  .tab-content { margin-top: 10px !important; }
+  /* Ensure no extra horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
 }
 
 /* Search Section */
@@ -873,10 +944,11 @@ body {
     width: 280px;
   }
   
-  .main-content {
-    margin-left: 0;
-    padding: 60px 20px 20px;
-  }
+  /* Desktop-only styling for main content */
+    .main-content {
+      margin-left: 0;
+      padding: 10px 20px 20px !important;
+    }
   
   .sidebar.collapsed + .main-content {
     margin-left: 0;

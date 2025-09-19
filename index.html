@@ -21,6 +21,10 @@
       <!-- Sidebar Navigation -->
       <nav class="sidebar" id="sidebar">
         <div class="sidebar-sticky">
+          <!-- Mobile Close Button -->
+          <button class="sidebar-close d-md-none" id="sidebarClose" type="button" aria-label="Close sidebar">
+            <i class="fas fa-times"></i>
+          </button>
           <!-- Collapse Button -->
           <button class="sidebar-toggle" id="sidebarToggle" type="button">
             <i class="fas fa-chevron-left"></i>
@@ -96,7 +100,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <i class="fas fa-wpforms"></i>
+                <i class="fa fa-wpforms" aria-hidden="true"></i>
                 <span class="sidebar-text">Forms</span>
               </a>
             </li>
@@ -142,12 +146,12 @@
 
       <!-- Main Content -->
       <main class="main-content w-100" id="mainContent">
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn d-md-none" id="mobileMenuBtn">
-          <i class="fas fa-bars"></i>
-        </button>
         <!-- Top Header Navigation -->
         <div class="top-header-nav d-flex justify-content-between align-items-center py-3 px-4 bg-white border-bottom">
+          <!-- Mobile Menu Button (visible on small screens and inline with header) -->
+          <button class="mobile-menu-btn d-md-none mr-2" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
           <!-- Left Side - Search Bar -->
           <div class="search-section">
             <div class="search-wrapper position-relative">
@@ -221,7 +225,8 @@
                     <h4 class="mb-0 mr-2">Madilyn</h4>
                   </div>
                   <div>
-                    <span class="badge" style="background-color: #d2ecb9; color: #5fa929; padding: 4px 8px; font-size: 12px; font-weight: 800;">ACTIVE</span>
+                    <span class="badge"
+                      style="background-color: #d2ecb9; color: #5fa929; padding: 4px 8px; font-size: 12px; font-weight: 800;">ACTIVE</span>
                   </div>
                 </div>
 
@@ -337,13 +342,13 @@
                 </div>
 
                 <style>
-                .icon-box {
-                  width: 40px;
-                  height: 40px;
-                  background-color: #f8f9fa;
-                  border: 1px solid #dee2e6;
-                  border-radius: 6px;
-                }
+                  .icon-box {
+                    width: 40px;
+                    height: 40px;
+                    background-color: #f8f9fa;
+                    border: 1px solid #dee2e6;
+                    border-radius: 6px;
+                  }
                 </style>
               </div>
             </div>
@@ -835,16 +840,34 @@
         $('.sidebar').toggleClass('collapsed');
       });
 
-      // Mobile menu functionality
-      $('#mobileMenuBtn').click(function () {
-        $('.sidebar').toggleClass('show');
+      // Sidebar close button (for mobile)
+      $('#sidebarClose').click(function () {
+        $('.sidebar').removeClass('show');
+        $('#mobileMenuBtn i').removeClass('fa-times').addClass('fa-bars');
+      });
+
+      // Mobile menu functionality with icon toggle
+      $('#mobileMenuBtn').click(function (e) {
+        e.stopPropagation();
+        var $sidebar = $('.sidebar');
+        var $icon = $('#mobileMenuBtn i');
+        $sidebar.toggleClass('show');
+        if ($sidebar.hasClass('show')) {
+          $icon.removeClass('fa-bars').addClass('fa-times');
+        } else {
+          $icon.removeClass('fa-times').addClass('fa-bars');
+        }
       });
 
       // Close sidebar when clicking outside on mobile
       $(document).click(function (e) {
         if ($(window).width() <= 768) {
           if (!$(e.target).closest('.sidebar, #mobileMenuBtn').length) {
-            $('.sidebar').removeClass('show');
+            if ($('.sidebar').hasClass('show')) {
+              $('.sidebar').removeClass('show');
+              var $icon = $('#mobileMenuBtn i');
+              $icon.removeClass('fa-times').addClass('fa-bars');
+            }
           }
         }
       });
@@ -852,7 +875,11 @@
       // Handle window resize
       $(window).resize(function () {
         if ($(window).width() > 768) {
-          $('.sidebar').removeClass('show');
+          if ($('.sidebar').hasClass('show')) {
+            $('.sidebar').removeClass('show');
+            var $icon = $('#mobileMenuBtn i');
+            $icon.removeClass('fa-times').addClass('fa-bars');
+          }
         }
       });
 
